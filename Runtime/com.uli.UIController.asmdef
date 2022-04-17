@@ -1,0 +1,17 @@
+{
+    "name": "com.uli.UIController",
+    "rootNamespace": "",
+    "references": [
+        "Unity.TextMeshPro",
+        "com.uli.UITransitions"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

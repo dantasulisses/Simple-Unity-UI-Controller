@@ -1,25 +1,21 @@
 {
-    "name": "com.[company-name].[package-name]",
-    "version": "1.2.3",
-    "displayName": "Package Example",
-    "description": "This is an example package",
-    "unity": "2019.1",
-    "unityRelease": "0b5",
-    "documentationUrl": "https://example.com/",
-    "changelogUrl": "https://example.com/changelog.html",
-    "licensesUrl": "https://example.com/licensing.html",
-    "dependencies": {
-        "com.[company-name].some-package": "1.0.0",
-        "com.[company-name].other-package": "2.0.0"
-    },
-    "keywords": [
-        "keyword1",
-        "keyword2",
-        "keyword3"
-    ],
-    "author": {
-        "name": "Unity",
-        "email": "unity@example.com",
-        "url": "https://www.unity3d.com"
-    }
+  "name": "com.uli.uicontroller",
+  "version": "1.0.0",
+  "displayName": "Simple UI Controller",
+  "description": "Simple UI Controller is a basic UI system which helps to create UI screens in Unity decoupled from code, which allows Designers and Artists to build entire screen flows without needing code and easily allows developers to add functionality after this",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://github.com/dantasulisses/Simple-Unity-UI-Controller",
+  "changelogUrl": "https://github.com/dantasulisses/Simple-Unity-UI-Controller/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/dantasulisses/Simple-Unity-UI-Controller/blob/main/LICENSE.md",
+  "keywords": [
+    "unity",
+    "ui",
+    "controller"
+  ],
+  "author": {
+    "name": "Ulisses Dantas",
+    "email": "ulisses.s.dantas@gmail.com",
+    "url": "https://www.ulidantas.com/"
+  }
 }
