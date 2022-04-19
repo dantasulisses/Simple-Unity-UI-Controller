@@ -3,7 +3,8 @@
     "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
-        "com.uli.UITransitions"
+        "com.uli.UITransitions",
+        "com.uli.Extensions"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
