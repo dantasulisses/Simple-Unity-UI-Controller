@@ -10,7 +10,7 @@ namespace Uli.UI.Components
         public string targetPage;
         public void TriggerGlobalPageEvent() 
         {
-            Uli.Events.EventManager.Instance.TriggerEvent(new Uli.Events.TriggerChangePage(targetPage));
+            Uli.Events.EventManager.Instance.DispatchEvent(new Uli.Events.TriggerChangePage(targetPage));
         }
     }
 }
