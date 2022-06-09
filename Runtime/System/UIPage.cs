@@ -14,7 +14,7 @@ namespace Uli.UI
     public class UIPage : MonoBehaviour
     {
         [InfoBox("On which screens states this page is displayed")]
-        [SerializeField] private List<string> showOn;
+        public List<string> showOn;
 
         [InfoBox("Transition behavior(s) that this page does when displayed/disappeared")]
         [SerializeField] private Transition.BaseTransition[] transitions;

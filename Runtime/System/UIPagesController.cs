@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 #if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
@@ -16,7 +17,7 @@ namespace Uli.UI
     public class UIPagesController : MonoBehaviour
     {
         [Title("The pages that respond to this controller")]
-        [SerializeField] private UIPage[] controlledPages;
+        public List<UIPage> controlledPages = new List<UIPage>();
 
 #if ULI_UTILS
         [InfoBox("Determines if this PagesController will consume events of TriggerChangePage triggered by the EventManager")]
@@ -60,10 +61,24 @@ namespace Uli.UI
         {
             wasOnPage = currentPage;
             currentPage = page;
-            for (int x = 0; x < controlledPages.Length; x++)
+            for (int x = 0; x < controlledPages.Count; x++)
             {
                 controlledPages[x].UpdatePageState(page);
             }
+        }
+        public void AddPage(UIPage page) 
+        {
+            if(page == null || controlledPages.Contains(page))
+                return;
+
+            controlledPages.Add(page);
+        }
+        public void RemovePage(UIPage page) 
+        {
+            if (page == null || !controlledPages.Contains(page))
+                return;
+
+            controlledPages.Remove(page);
         }
     }
 }
