@@ -64,11 +64,16 @@ namespace Uli.UI
         public virtual void SetPageEnableStatus(bool doEnable) 
         {
             if (isPageEnabled && !doEnable)
+            {
+                isPageEnabled = doEnable;
                 onExitPage.Invoke();
+            }
             if (!isPageEnabled && doEnable)
+            {
+                isPageEnabled = doEnable;
                 onEnterPage.Invoke();
+            }
 
-            isPageEnabled = doEnable;
             for (int x = 0; x < transitions.Length; x++)
             {
                 transitions[x].DoTween(doEnable);
