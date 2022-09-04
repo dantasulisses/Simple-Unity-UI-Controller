@@ -1,6 +1,6 @@
 {
   "name": "com.uli.uicontroller",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "displayName": "Simple UI Controller",
   "description": "Simple UI Controller is a basic UI system which helps to create UI screens in Unity decoupled from code, which allows Designers and Artists to build entire screen flows without needing code and easily allows developers to add functionality after this",
   "unity": "2019.1",
