@@ -6,7 +6,6 @@ using Sirenix.OdinInspector;
 #else
 //Do some alias to avoid breaking the inspector
 using InfoBox = UnityEngine.TooltipAttribute;
-using ShowInInspector = UnityEngine.SerializeField;
 #endif
 
 namespace Uli.UI
@@ -16,9 +15,10 @@ namespace Uli.UI
         [InfoBox("On which screens states this page is displayed")]
         public List<string> showOn;
 
-        [ShowInInspector] public bool isPageEnabled { get; protected set; } = false;
+        [SerializeField] protected bool isPageEnabled = false;
         protected UIBaseController controller;
 
+        public bool IsPageEnabled() => isPageEnabled;
         public void Initialize(UIBaseController myController) 
         {
             controller = myController;

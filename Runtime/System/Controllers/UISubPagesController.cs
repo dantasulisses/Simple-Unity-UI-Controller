@@ -54,7 +54,7 @@ namespace Uli.UI
         
         public override void GoToPage(string subpage)
         {
-            if(!ownerPage.isPageEnabled)
+            if(!ownerPage.IsPageEnabled())
                 return;
             
             wasOnSubPage = currentSubPage;
