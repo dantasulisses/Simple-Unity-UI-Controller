@@ -17,10 +17,10 @@ namespace Uli.UI
         [SerializeField] private Transition.BaseTransition[] transitions;
 
         [InfoBox("Actions called when the page was disabled and then gets enabled")]
-        [SerializeField] private UnityEvent onEnterPage;
+        public UnityEvent onEnterPage;
 
         [InfoBox("Actions called when the page was enabled and then gets disabled")]
-        [SerializeField] private UnityEvent onExitPage;
+        public UnityEvent onExitPage;
 
         [SerializeField] private bool selectAnObjectOnEnablePage = false;
 #if ODIN_INSPECTOR
@@ -55,10 +55,11 @@ namespace Uli.UI
         public override void DoPageOpen()
         {
             isPageEnabled = true;
-            onEnterPage.Invoke();
-            
+
             ExecuteTransitions();
-            
+
+            onEnterPage.Invoke();
+
             if (selectAnObjectOnEnablePage && EventSystem.current != null)
             {
                 EventSystem.current.SetSelectedGameObject(desiredSelectedObject);
