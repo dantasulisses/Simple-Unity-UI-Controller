@@ -23,15 +23,15 @@ namespace Uli.UI
         {
             controller = myController;
         }
-        public void GoToPage(string destination) 
+        public virtual void GoToPage(string destination) 
         {
             controller.GoToPage(destination);
         }
-        public void GoToPreviousPage() 
+        public virtual void GoToPreviousPage() 
         {
             controller.GoToPreviousPage();
         }
-        public void UpdatePageState(string currentPage)
+        public virtual void UpdatePageState(string currentPage)
         {
             bool doShow = showOn.Contains(currentPage);
             SetPageEnableStatus(doShow);
