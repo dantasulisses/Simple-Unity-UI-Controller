@@ -47,6 +47,7 @@ namespace Uli.UI
             foreach (var transition in transitions)
             {
                 transition.SetState(state);
+                UnityEditor.EditorUtility.SetDirty(transition);
             }
         }
 #endif
